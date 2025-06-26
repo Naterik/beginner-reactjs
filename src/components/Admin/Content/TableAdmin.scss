@@ -1,0 +1,19 @@
+table,
+th,
+td,
+tr {
+  border-collapse: collapse;
+  border: 1px solid;
+}
+
+table {
+  border-radius: 0.5em;
+  outline: 1px solid;
+  outline-offset: -1px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.5em 1em;
+}

@@ -1,36 +1,37 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+    const login = useNavigate();
+    const handleLogin = () => {
+        login("/login")
+    }
+
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <NavLink to="/" className="navbar-brand" >React quiz</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link to="/" className="nav-link">Home</Link>
-                        <Link to="/user" className="nav-link">User</Link>
-                        <Link to="/admin" className="nav-link">Admin</Link>
-                        {/* <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">User</Nav.Link>
-                        <Nav.Link href="#link">Admin</Nav.Link> */}
+                        <NavLink to="/" className="nav-link">Home</NavLink>
+                        <NavLink to="/user" className="nav-link">User</NavLink>
+                        <NavLink to="/admin" className="nav-link">Admin</NavLink>
                     </Nav>
                     <Nav >
-                        <NavDropdown title="Setting" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Logout
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Profile</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                        <div className='header-button'>
+                            <button className='btn btn-login' onClick={() => { handleLogin() }}>
+
+                                Login
+
+                            </button>
+                            <button className='btn btn-signup'>
+                                SignUp
+                            </button>
+                        </div>
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

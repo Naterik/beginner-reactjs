@@ -8,4 +8,102 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (width <= 62em) {
+  .app-container {
+    .header-container {
+      .navbar {
+        .header-button {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .btn-login {
+            width: 10%;
+          }
+          .btn-signup {
+            width: 10%;
 
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-container {
+  .header-container {
+    .navbar {
+      z-index: 10;
+      // opacity: 0.6;
+      background-color: rgba(0, 0, 0, 0) !important;
+      padding-top: 20px;
+      .header-button {
+        display: flex;
+        gap: 10px;
+        .btn-login {
+          border: black 1px solid;
+        }
+        .btn-signup {
+          background-color: black;
+          color: white;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+        }
+      }
+
+      .nav-link {
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+  .homepage-container {
+    .homepage-content {
+      position: relative;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: flex-start;
+      padding: 6.5em;
+      width: 50%;
+      line-height: 1em;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      .title-1 {
+        font-size: 5rem;
+        line-height: 1em;
+        letter-spacing: -0.3rem;
+      }
+      .title-2 {
+        font-size: 1.25rem;
+        line-height: 1em;
+      }
+      .btn-homepage {
+        border-radius: 0.75em;
+        border: none;
+        line-height: 1em;
+        padding: 1em;
+        cursor: pointer;
+        background-color: black;
+        color: #ffff;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+}
+video {
+  position: fixed;
+  top: -8em;
+  bottom: 0;
+  // inset: 0;
+  width: 100%;
+}
