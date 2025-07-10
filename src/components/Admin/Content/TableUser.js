@@ -1,11 +1,11 @@
 
 import Table from 'react-bootstrap/Table';
-import "./TableAdmin.scss"
-const TableAdmin = (props) => {
+import "./Table.scss"
+const TableUser = (props) => {
     const { listUser, handleBtnUpdateModal, handleBtnViewModal, handleBtnDeleteModal } = props
 
     return (
-        <Table hover className='text-center'>
+        <Table className='text-start' hover>
             <thead >
                 <tr >
                     <th scope="col">No</th>
@@ -43,4 +43,4 @@ const TableAdmin = (props) => {
     );
 }
 
-export default TableAdmin
+export default TableUser

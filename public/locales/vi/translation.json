@@ -1,0 +1,190 @@
+{
+  "homepage": {
+    "title1": "Tìm hiểu khách hàng của bạn với các biểu mẫu ",
+    "title2": "Thu thập tất cả dữ liệu bạn cần để hiểu khách hàng với các biểu mẫu được thiết kế khác biệt một cách mới mẻ.",
+    "button_start": "Bắt đầu—miễn phí",
+    "button_do": "Làm bài kiểm tra ngay"
+  },
+  "header": {
+    "home": "Trang chủ",
+    "user": "Người dùng",
+    "admin": "Người quản trị",
+    "title": "Câu đố cơ bản",
+    "setting": "Cài đặt",
+    "logout": "Thoát",
+    "button_login": "Đăng nhập",
+    "button_signup": "Đăng ký",
+    "detail_quiz": "Làm câu đố"
+  },
+  "quiz": {
+    "title": "Câu đố ",
+    "button": "Bắt đầu",
+    "error": "Bạn không có câu đố nào",
+    "next_button": "SAU",
+    "pre_button": "TRƯỚC",
+    "finish": "NỘP BÀI"
+  },
+  "admin": {
+    "sidebar": {
+      "icon": "Quản trị viên",
+      "dashboard": "Bảng điều kiển",
+      "footer": "Khuong",
+      "features": "Tính năng",
+      "sub_features": {
+        "user": "Quản lý người dùng",
+        "quiz": "Quản lý câu đố",
+        "question": "Quản lý câu hỏi"
+      }
+    },
+    "user": {
+      "title": "Quản lý người dùng",
+      "add_button": "Thêm mới người dùng",
+      "pev_button": "Trước",
+      "next_button": "Sau",
+      "sub_role": {
+        "user": "Người dùng",
+        "admin": "Người quản trị"
+      },
+      "upload_image": "Tải ảnh lên",
+      "non_image": "Hãy chọn ảnh để tải lên",
+      "password": "Mật khẩu",
+      "close": "Đóng",
+      "save": "Lưu",
+      "modal_delete": {
+        "close": "Đóng",
+        "delete": "Xóa",
+        "title": "Xóa người dùng",
+        "description": "Bạn có chắc muốn xóa người dùng với email"
+      },
+      "table": {
+        "no": "STT",
+        "username": "Tên người dùng",
+        "email": "Email",
+        "role": "Quyền hạn",
+        "error": "Không có ",
+        "action": "Thao tác",
+        "button": {
+          "view": "Chi tiết",
+          "update": "Chỉnh sửa",
+          "delete": "Xóa"
+        }
+      }
+    },
+    "quiz": {
+      "manage": {
+        "form": {
+          "title": "Quản lý câu đố",
+          "add_button": "Thêm mới câu đố",
+          "pev_button": "Trước",
+          "next_button": "Sau",
+          "sub_role": {
+            "user": "Người dùng",
+            "admin": "Người quản trị"
+          },
+          "upload_image": "Tải ảnh lên",
+          "non_image": "Hãy chọn ảnh để tải lên",
+          "name": "Tên câu đố",
+          "description": "Mô tả",
+          "close": "Đóng",
+          "save": "Lưu",
+          "add_new_quiz_legend": "Thêm câu đố mới",
+          "quiz_difficulty": {
+            "easy": "DỄ",
+            "medium": "TRUNG BÌNH",
+            "hard": "KHÓ"
+          },
+          "image_upload_label": "Tải ảnh lên",
+          "name_description_required_error": "Tên hoặc mô tả là bắt buộc"
+        },
+        "modal_delete": {
+          "close": "Đóng",
+          "delete": "Xóa",
+          "title": "Xóa câu đố",
+          "description": "Bạn có chắc muốn xóa câu đố "
+        },
+        "modal_update": {
+          "title": "Cập nhật câu đố",
+          "name": "Tên",
+          "description": "Mô tả",
+          "difficulty": "Độ khó",
+          "upload_image": "Tải ảnh lên",
+          "non_image": "Vui lòng chọn ảnh của bạn",
+          "close": "Đóng",
+          "save_changes": "Lưu thay đổi"
+        },
+        "table": {
+          "no": "STT",
+          "name": "Tên câu đố",
+          "description": "Mô tả",
+          "difficulty": "Độ khó",
+          "action": "Thao tác",
+          "not_found": "Không tìm thấy dữ liệu nào",
+          "button": {
+            "update": "Chỉnh sửa",
+            "delete": "Xóa"
+          }
+        }
+      },
+      "update_qa": {
+        "title": "Cập nhật câu đố",
+        "title-2": "Chọn người dùng",
+        "select_quiz": "Chọn câu đố",
+        "add_questions": "Thêm câu hỏi {{num}}",
+        "question_description_placeholder": "Mô tả câu hỏi {{num}}",
+        "question_description_label": "Mô tả câu hỏi {{num}}",
+        "no_file_selected": "Chưa có tệp nào được chọn",
+        "answer_placeholder": "Câu trả lời {{num}}",
+        "answer_label": "Câu trả lời {{num}}",
+        "save_button": "Lưu",
+        "error_answer_required": "Vui lòng nhập câu trả lời và chọn ít nhất một đáp án đúng",
+        "error_one_answer_required": "Vui lòng chọn ít nhất một câu trả lời đúng",
+        "error_question_description_required": "Vui lòng nhập mô tả cho câu hỏi",
+        "error_select_quiz": "Vui lòng chọn câu đố của bạn",
+        "upsert_fail_error": "Cập nhật thất bại với lỗi"
+      },
+      "assign_to_user": "Gán cho người dùng",
+      "assign": "Gán"
+    },
+    "question": {
+      "title": "Cập nhật hỏi",
+      "add_questions": "Thêm câu hỏi {{num}}",
+      "question_description_placeholder": "Mô tả câu hỏi {{num}}",
+      "question_description_label": "Mô tả câu hỏi {{num}}",
+      "no_file_selected": "Chưa có tệp nào được chọn",
+      "answer_placeholder": "Câu trả lời {{num}}",
+      "answer_label": "Câu trả lời {{num}}",
+      "save_button": "Lưu",
+      "error_answer_required": "Vui lòng nhập câu trả lời và chọn ít nhất một đáp án đúng",
+      "error_one_answer_required": "Vui lòng chọn ít nhất một câu trả lời đúng",
+      "error_question_description_required": "Vui lòng nhập mô tả cho câu hỏi",
+      "error_select_quiz": "Vui lòng chọn câu đố của bạn",
+      "upsert_fail_error": "Cập nhật thất bại với lỗi"
+    }
+  },
+  "auth": {
+    "login": {
+      "have_question": "Có thắc mắc?",
+      "sign_up": "Đăng ký",
+      "welcome": "Chào mừng đến với ứng dụng của chúng tôi",
+      "get_better_data": "Thu thập dữ liệu tốt hơn với biểu mẫu đàm thoại, khảo sát, câu đố & hơn thế nữa.",
+      "email_label": "Email",
+      "password_label": "Mật khẩu",
+      "forget_password": "Quên mật khẩu?",
+      "login_button": "Đăng nhập vào ứng dụng",
+      "go_back": "<< Quay về trang chủ"
+    },
+    "register": {
+      "already_have": "Đã có tài khoản?",
+      "login": "Đăng nhập",
+      "welcome": "Ứng dụng Câu đố",
+      "get_better_data": "Thu thập dữ liệu tốt hơn với biểu mẫu đàm thoại, khảo sát, câu đố & hơn thế nữa.",
+      "username_label": "Tên người dùng",
+      "email_label": "Email",
+      "password_label": "Mật khẩu",
+      "invalid_email": "Email không hợp lệ",
+      "invalid_password": "Mật khẩu không hợp lệ",
+      "sign_up_button": "Đăng ký",
+      "go_back": "<< Quay về trang chủ"
+    }
+  }
+}

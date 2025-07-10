@@ -1,0 +1,41 @@
+.question-container {
+  padding: 20px;
+  .question-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .question-select {
+    }
+    .question-add {
+      display: flex;
+
+      align-items: center;
+      gap: 15px;
+      .question-description {
+        display: flex;
+        flex-direction: column;
+      }
+      .image-upload {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    .answer-content {
+      .answer {
+        display: flex;
+        .answer-icons {
+          gap: 7px;
+        }
+      }
+    }
+  }
+}
+
+.icon-plus {
+  color: #4cd964;
+}
+.icon-minus {
+  color: red;
+}

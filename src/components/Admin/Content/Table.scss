@@ -1,13 +1,14 @@
 table,
+tr,
 th,
-td,
-tr {
+td {
   border-collapse: collapse;
-  border: 1px solid;
+  border: 1px solid black;
+  // outline: 0.1px solid;
 }
 
 table {
-  border-radius: 0.5em;
+  border-radius: 1em;
   outline: 1px solid;
   outline-offset: -1px;
   overflow: hidden;
@@ -15,5 +16,5 @@ table {
 
 th,
 td {
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
 }

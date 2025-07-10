@@ -1,0 +1,190 @@
+{
+  "homepage": {
+    "title1": "Tìm hiểu khách hàng của bạn với các biểu mẫu ",
+    "title2": "Collect all the data you need to understand customers with uniquely designed forms.",
+    "button_start": "Get started—it's free",
+    "button_do": "Take the quiz now"
+  },
+  "header": {
+    "home": "Home",
+    "user": "User",
+    "admin": "Admin",
+    "title": "Basic Quiz",
+    "setting": "Settings",
+    "logout": "Logout",
+    "button_login": "Login",
+    "button_signup": "Sign up",
+    "detail_quiz": "Do Quiz"
+  },
+  "quiz": {
+    "title": "Câu đố ",
+    "button": "Start",
+    "error": "You have no quizzes",
+    "next_button": "NEXT",
+    "pre_button": "PREVIOUS",
+    "finish": "SUBMIT"
+  },
+  "admin": {
+    "sidebar": {
+      "icon": "Admin",
+      "dashboard": "Dashboard",
+      "footer": "Khuong",
+      "features": "Features",
+      "sub_features": {
+        "user": "User Management",
+        "quiz": "Quiz Management",
+        "question": "Question Management"
+      }
+    },
+    "user": {
+      "title": "User Management",
+      "add_button": "Add New User",
+      "pev_button": "Previous",
+      "next_button": "Next",
+      "sub_role": {
+        "user": "User",
+        "admin": "Admin"
+      },
+      "upload_image": "Upload Image",
+      "non_image": "Please select an image to upload",
+      "password": "Password",
+      "close": "Close",
+      "save": "Save",
+      "modal_delete": {
+        "close": "Close",
+        "delete": "Delete",
+        "title": "Delete User",
+        "description": "Are you sure you want to delete the user with email"
+      },
+      "table": {
+        "no": "No.",
+        "username": "Username",
+        "email": "Email",
+        "role": "Role",
+        "error": "No data",
+        "action": "Action",
+        "button": {
+          "view": "Details",
+          "update": "Edit",
+          "delete": "Delete"
+        }
+      }
+    },
+    "quiz": {
+      "manage": {
+        "form": {
+          "title": "Quiz Management",
+          "add_button": "Add New Quiz",
+          "pev_button": "Previous",
+          "next_button": "Next",
+          "sub_role": {
+            "user": "User",
+            "admin": "Admin"
+          },
+          "upload_image": "Upload Image",
+          "non_image": "Please select an image to upload",
+          "name": "Quiz Name",
+          "description": "Description",
+          "close": "Close",
+          "save": "Save",
+          "add_new_quiz_legend": "Add New Quiz",
+          "quiz_difficulty": {
+            "easy": "EASY",
+            "medium": "MEDIUM",
+            "hard": "HARD"
+          },
+          "image_upload_label": "Upload Image",
+          "name_description_required_error": "Name or description is required"
+        },
+        "modal_delete": {
+          "close": "Close",
+          "delete": "Delete",
+          "title": "Delete Quiz",
+          "description": "Are you sure you want to delete the quiz"
+        },
+        "modal_update": {
+          "title": "Update Quiz",
+          "name": "Name",
+          "description": "Description",
+          "difficulty": "Difficulty",
+          "upload_image": "Upload Image",
+          "non_image": "Please select your image",
+          "close": "Close",
+          "save_changes": "Save Changes"
+        },
+        "table": {
+          "no": "No.",
+          "name": "Quiz Name",
+          "description": "Description",
+          "difficulty": "Difficulty",
+          "action": "Action",
+          "not_found": "No data found",
+          "button": {
+            "update": "Edit",
+            "delete": "Delete"
+          }
+        }
+      },
+      "update_qa": {
+        "title": "Update Quiz",
+        "title-2": "Select User",
+        "select_quiz": "Select Quiz",
+        "add_questions": "Add Question {{num}}",
+        "question_description_placeholder": "Question description {{num}}",
+        "question_description_label": "Question description {{num}}",
+        "no_file_selected": "No file selected",
+        "answer_placeholder": "Answer {{num}}",
+        "answer_label": "Answer {{num}}",
+        "save_button": "Save",
+        "error_answer_required": "Please enter answers and select at least one correct answer",
+        "error_one_answer_required": "Please select at least one correct answer",
+        "error_question_description_required": "Please enter the question description",
+        "error_select_quiz": "Please select your quiz",
+        "upsert_fail_error": "Update failed with error"
+      },
+      "assign_to_user": "Assign to User",
+      "assign": "Assign"
+    },
+    "question": {
+      "title": "Update Question",
+      "add_questions": "Add Question {{num}}",
+      "question_description_placeholder": "Question description {{num}}",
+      "question_description_label": "Question description {{num}}",
+      "no_file_selected": "No file selected",
+      "answer_placeholder": "Answer {{num}}",
+      "answer_label": "Answer {{num}}",
+      "save_button": "Save",
+      "error_answer_required": "Please enter answers and select at least one correct answer",
+      "error_one_answer_required": "Please select at least one correct answer",
+      "error_question_description_required": "Please enter the question description",
+      "error_select_quiz": "Please select your quiz",
+      "upsert_fail_error": "Update failed with error"
+    }
+  },
+  "auth": {
+    "login": {
+      "have_question": "Have questions?",
+      "sign_up": "Sign up",
+      "welcome": "Welcome to our application",
+      "get_better_data": "Collect better data with conversational forms, surveys, quizzes & more.",
+      "email_label": "Email",
+      "password_label": "Password",
+      "forget_password": "Forgot password?",
+      "login_button": "Login to the app",
+      "go_back": "<< Back to homepage"
+    },
+    "register": {
+      "already_have": "Already have an account?",
+      "login": "Login",
+      "welcome": "Quiz Application",
+      "get_better_data": "Collect better data with conversational forms, surveys, quizzes & more.",
+      "username_label": "Username",
+      "email_label": "Email",
+      "password_label": "Password",
+      "invalid_email": "Invalid email",
+      "invalid_password": "Invalid password",
+      "sign_up_button": "Sign up",
+      "go_back": "<< Back to homepage"
+    }
+  }
+}
