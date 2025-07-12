@@ -31,67 +31,64 @@ const DashBoard = () => {
       Qz = res?.DT?.others?.countQuiz ?? 0;
       As = res?.DT?.others?.countAnswers ?? 0;
       const data = [
-        {
-          name: 'Quiz',
-          Qz: Qz,
-        },
-        {
-          name: 'Question',
-          Qs: Qs,
-        },
-        {
-          name: 'Answer',
-          As: As,
-        },
+        { name: 'Quiz', Qz: Qz, fill: '#8884d8' },
+        { name: 'Question', Qs: Qs, fill: '#ffc107' },
+        { name: 'Answer', As: As, fill: '#0d6efd' },
       ];
       setDataChart(data);
-      console.log('data:', data);
-      console.log(res.DT);
     }
   };
   return (
-    <div className="dashboard-container">
-      <div className="dashboard-title">dashboard</div>
+    <div className="dashboard-container container">
+      <div className="dashboard-title fs-2">Welcome to Dashboard</div>
+      {/* <hr /> */}
       <div className="dashboard-content">
         <div className="c-left row">
           <div className="child col-3">
             <span className="text-total">Total user</span>
             <span className="text-number">
-              {/* {overviewList.users.countUsers ? <>{overviewList.users.countUsers}</> : <>0</>} */}
+              {overviewList?.users?.countUsers ? <>{overviewList?.users?.countUsers}</> : <>0</>}
             </span>
           </div>
           <div className="child col-3">
             <span className="text-total">Total Quizzes</span>
             <span className="text-number">
-              {/* {overviewList.others.countQuiz ? <>{overviewList.others.countQuiz}</> : <>0</>}{' '} */}
+              {overviewList?.others?.countQuiz ? (
+                <>{overviewList?.others?.countQuiz}</>
+              ) : (
+                <>0</>
+              )}{' '}
             </span>
           </div>
           <div className="child col-3">
             <span className="text-total">Total Questions</span>
             <span className="text-number">
-              {/* {overviewList.others.countQuestions ? (
-                <>{overviewList.others.countQuestions}</>
+              {overviewList?.others?.countQuestions ? (
+                <>{overviewList?.others?.countQuestions}</>
               ) : (
                 <>0</>
-              )} */}
+              )}
             </span>
           </div>
           <div className="child col-3">
             <span className="text-total">Total Answers</span>
             <span className="text-number">
-              {/* {overviewList.others.countAnswers ? <>{overviewList.others.countAnswers}</> : <>0</>} */}
+              {overviewList?.others?.countAnswers ? (
+                <>{overviewList?.others?.countAnswers}</>
+              ) : (
+                <>0</>
+              )}
             </span>
           </div>
         </div>
-        <div className="c-right">
-          {' '}
+        <div className="c-right ">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               width={500}
               height={300}
               data={dataChart}
               margin={{
-                top: 5,
+                top: 20,
                 right: 30,
                 left: 20,
                 bottom: 5,
@@ -102,21 +99,9 @@ const DashBoard = () => {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar
-                dataKey="Qz"
-                fill="#8884d8"
-                activeBar={<Rectangle fill="pink" stroke="#8884d8" />}
-              />
-              <Bar
-                dataKey="Qs"
-                fill="#ffc107"
-                activeBar={<Rectangle fill="pink" stroke="#ffc107" />}
-              />
-              <Bar
-                dataKey="As"
-                fill="#0d6efd"
-                activeBar={<Rectangle fill="pink" stroke="#0d6efd" />}
-              />
+              <Bar dataKey="Qz" stackId="a" fill="#8884d8" />
+              <Bar dataKey="Qs" stackId="a" fill="#ffc107" />
+              <Bar dataKey="As" stackId="a" fill="#0d6efd" />
             </BarChart>
           </ResponsiveContainer>
         </div>

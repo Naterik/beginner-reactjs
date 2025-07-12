@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 const CountDown = props => {
-  const { onTimeUp } = props;
-  const [duration, setDuration] = useState(1000000000);
+  const { onTimeUp, isSubmit } = props;
+  const [duration, setDuration] = useState(300);
   useEffect(() => {
-    if (duration === 0) {
+    if (isSubmit || duration === 0) {
       onTimeUp();
       return;
     }

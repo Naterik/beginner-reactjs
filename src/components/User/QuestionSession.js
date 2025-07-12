@@ -3,7 +3,7 @@ import CountDown from './CountDown';
 
 const QuestionSession = props => {
   const refClick = useRef([]);
-  const { listDetailQuiz, handleFinish, setIndex } = props;
+  const { listDetailQuiz, handleFinish, setIndex, isSubmit } = props;
 
   const onTimeUp = () => {
     handleFinish();
@@ -39,7 +39,7 @@ const QuestionSession = props => {
 
   return (
     <>
-      <CountDown onTimeUp={onTimeUp} />
+      <CountDown onTimeUp={onTimeUp} isSubmit={isSubmit} />
       <hr />
       <div className="session-container">
         {listDetailQuiz.length > 0 &&

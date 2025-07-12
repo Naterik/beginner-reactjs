@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import { useState } from 'react';
-
+import { IoIosClose, IoIosCheckmark } from 'react-icons/io';
 import Lightbox from 'react-awesome-lightbox';
 const Question = props => {
-  const { question, index, handleCheckbox, isPreviewImage, setIsPreviewImage } = props;
+  const { question, index, handleCheckbox, isPreviewImage, setIsPreviewImage, isShowAnswer } =
+    props;
 
   if (_.isEmpty(question)) {
     return;
@@ -43,6 +44,13 @@ const Question = props => {
                   }}
                 />
                 <label className="form-check-label">{item.description}</label>
+                {isShowAnswer && (
+                  <>
+                    {item.isSelected && !item.isCorrect && <IoIosClose className="incorrect" />}
+
+                    {item.isCorrect && <IoIosCheckmark className="correct" />}
+                  </>
+                )}
               </div>
             );
           })}

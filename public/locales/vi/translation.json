@@ -14,7 +14,21 @@
     "logout": "Thoát",
     "button_login": "Đăng nhập",
     "button_signup": "Đăng ký",
-    "detail_quiz": "Làm câu đố"
+    "detail_quiz": "Làm câu đố",
+    "confirm_password": "Xác nhận mật khẩu",
+    "old_password": "Mật khẩu cũ",
+    "new_password": "Mật khẩu mới",
+    "history": {
+      "quiz_name": "Tên câu đố",
+      "total_quiz": "Số lượng câu hỏi",
+      "total_correct": "Số câu trả lời đúng",
+      "date": "Ngày trả lời"
+    },
+    "setting_modal": {
+      "user_info": "Thông tin người dùng",
+      "change_pass": "Thay đổi mật khẩu",
+      "history_quiz": "Lịch sử làm bài"
+    }
   },
   "quiz": {
     "title": "Câu đố ",

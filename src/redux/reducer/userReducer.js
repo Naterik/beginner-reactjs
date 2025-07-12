@@ -1,4 +1,9 @@
-import { FETCH_USER_LOGIN_SUCCESS, REFRESH_TOKEN, USER_LOGOUT } from '../action/userAction';
+import {
+  FETCH_USER_LOGIN_SUCCESS,
+  REFRESH_TOKEN,
+  UPDATE_PROFILE,
+  USER_LOGOUT,
+} from '../action/userAction';
 
 const INITIAL_STATE = {
   account: {
@@ -12,7 +17,6 @@ const INITIAL_STATE = {
   isAuthenticated: false,
 };
 const userReducer = (state = INITIAL_STATE, action) => {
-  console.log('action:', action.payload);
   switch (action.type) {
     case FETCH_USER_LOGIN_SUCCESS:
       return {
@@ -39,6 +43,15 @@ const userReducer = (state = INITIAL_STATE, action) => {
           image: '',
         },
         isAuthenticated: false,
+      };
+    case UPDATE_PROFILE:
+      return {
+        ...state,
+        account: {
+          ...state.account,
+          username: action?.payload?.DT?.username,
+          image: action?.payload?.DT?.image,
+        },
       };
     case REFRESH_TOKEN:
       return {

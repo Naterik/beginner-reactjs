@@ -28,6 +28,14 @@
         .child {
           text-align: left;
           padding-left: 5rem;
+          .incorrect {
+            color: red;
+            font-size: 2em;
+          }
+          .correct {
+            color: green;
+            font-size: 2em;
+          }
         }
       }
     }

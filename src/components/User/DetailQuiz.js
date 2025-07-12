@@ -14,9 +14,10 @@ const DetailQuiz = () => {
   const location = useLocation();
   const [listDetailQuiz, setListDetailQuiz] = useState([]);
   const [showResult, setShowResult] = useState(false);
+  const [isShowAnswer, setIsShowAnswer] = useState(false);
   const [isPreviewImage, setIsPreviewImage] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
   const [result, setResult] = useState({});
-  const [isShowButton, setIsShowButton] = useState(true);
   const [index, setIndex] = useState(0);
   useEffect(() => {
     handleGetDetailQuiz();
@@ -40,6 +41,7 @@ const DetailQuiz = () => {
               image = item.image;
             }
             item.answers.isSelected = false;
+            item.answers.isCorrect = false;
             answers.push(item.answers);
           });
           answers = _.orderBy(answers, ['id'], ['asc']);
@@ -80,6 +82,9 @@ const DetailQuiz = () => {
   const handleNext = () => {
     if (listDetailQuiz && listDetailQuiz.length > index + 1) setIndex(index + 1);
   };
+  const handleShowAnswer = () => {
+    setIsShowAnswer(true);
+  };
   const handleFinish = async () => {
     const payload = {
       quizId: +quizId,
@@ -99,12 +104,40 @@ const DetailQuiz = () => {
     payload.answers = answers;
     let res = await submitAnswer(payload);
     if (res) {
+      setIsSubmit(true);
       setResult({
         countCorrect: res?.DT?.countCorrect,
         countTotal: res?.DT?.countTotal,
         quizData: res?.DT?.quizData,
       });
       setShowResult(true);
+      //update DataQuiz with correct answer
+
+      if (res && res.DT.quizData) {
+        let dataClone = _.cloneDeep(listDetailQuiz);
+        let a = res.DT.quizData;
+        for (let q of a) {
+          console.log('q:', q);
+          for (let i = 0; i < dataClone.length; ++i) {
+            if (+q.questionId === +dataClone[i].questionId) {
+              //push isCorrect
+              let updateCorrect = [];
+              for (let j = 0; j < dataClone[i].answers.length; ++j) {
+                let findCorrect = q.systemAnswers.find(
+                  item => +item.id === +dataClone[i].answers[j].id
+                );
+                if (findCorrect) {
+                  dataClone[i].answers[j].isCorrect = true;
+                }
+                updateCorrect.push(dataClone[i].answers[j]);
+              }
+              dataClone[i].answers = updateCorrect;
+            }
+          }
+        }
+        setListDetailQuiz(dataClone);
+        console.log('dataClone', dataClone);
+      }
     }
   };
   return (
@@ -134,8 +167,14 @@ const DetailQuiz = () => {
               handleCheckbox={handleSelectedAnswer}
               setIsPreviewImage={setIsPreviewImage}
               isPreviewImage={isPreviewImage}
+              isShowAnswer={isShowAnswer}
             />
-            <ModalShowResult show={showResult} setShow={setShowResult} result={result} />
+            <ModalShowResult
+              show={showResult}
+              setShow={setShowResult}
+              result={result}
+              handleShowAnswer={handleShowAnswer}
+            />
           </div>
           <div className="d-flex justify-content-center gap-3 question-button">
             <button
@@ -155,6 +194,7 @@ const DetailQuiz = () => {
               {t('quiz.next_button')}
             </button>
             <button
+              disabled={isSubmit}
               className="btn btn-success"
               onClick={() => {
                 handleFinish();
@@ -170,6 +210,7 @@ const DetailQuiz = () => {
             listDetailQuiz={listDetailQuiz}
             handleFinish={handleFinish}
             setIndex={setIndex}
+            isSubmit={isSubmit}
           />
         </div>
       </div>

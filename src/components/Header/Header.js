@@ -11,10 +11,13 @@ import { useDispatch } from 'react-redux';
 import { userLogout } from '../../redux/action/userAction';
 import Language from './Language';
 import { useTranslation } from 'react-i18next';
+import Profile from './Profile';
+import { useState } from 'react';
 const Header = () => {
   const user = useSelector(state => state.user.account);
   const { t } = useTranslation();
   const isAuthenticated = useSelector(state => state.user.isAuthenticated);
+  const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleLogin = () => {
@@ -73,7 +76,9 @@ const Header = () => {
               ) : (
                 <>
                   <NavDropdown title={user.email}>
-                    <NavDropdown.Item>{t('header.setting')}</NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => setShow(true)}>
+                      {t('header.setting')}
+                    </NavDropdown.Item>
                     <NavDropdown.Item onClick={() => handleLogout()}>
                       {t('header.logout')}
                     </NavDropdown.Item>
@@ -85,6 +90,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <Profile show={show} setShow={setShow} />
     </>
   );
 };
